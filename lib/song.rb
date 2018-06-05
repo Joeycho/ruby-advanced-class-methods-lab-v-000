@@ -47,4 +47,20 @@ class Song
   def self.alphabetical
     self.all.sort_by!{|s| s.name.downcase}
   end
+
+  def self.new_from_filename(filename)
+    song = self.new
+    temp = filename[0,-5].split("-")
+    song.name = temp[0]
+    song.artist_name = temp[1]
+    song
+  end
+
+  def self.create_from_filename
+
+  end
+
+  def self.destroy_all
+    @@all.clear
+  end
 end
