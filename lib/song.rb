@@ -53,7 +53,7 @@ class Song
     #binding.pry
     temp = filename[0..-5].split("-")
     song.name = temp[1].strip
-    song.artist_name = temp[2].strip
+    song.artist_name = temp[0].strip
     song
   end
 
