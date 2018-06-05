@@ -13,7 +13,12 @@ class Song
 
   def self.create
     @@all << self
-  #  binding.pry
+    self
+      binding.pry
+  end
+
+  def self.new_by_name(name)
+    @name = name
     self
   end
 
